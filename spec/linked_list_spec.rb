@@ -7,6 +7,14 @@ RSpec.describe LinkedList do
     list = LinkedList.new
 
     expect(list).to be_instance_of(LinkedList)
+
+  end
+
+  it 'has head' do
+    list = LinkedList.new
+
+    expect(list.head).to eq(nil)
     binding.pry
   end
+
 end
