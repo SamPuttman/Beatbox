@@ -83,6 +83,22 @@ class LinkedList
       puts "ERROR UNABLE TO INSERT AT POSITION #{position}. DOUBLE CHECK LIST LENGTH"
     end
   end
+
+  #copy to_string method and add include? lol 
+  def includes?(search_term)
+    string_result = ""
+    current_node = @head
+
+    while current_node != nil
+      string_result += current_node.data.to_s
+      string_result += " " if current_node.next_node
+      current_node = current_node.next_node
+    end
+    string_result.include?(search_term)
+  end
+
+
+
 end
 
 

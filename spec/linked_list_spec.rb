@@ -81,9 +81,28 @@ RSpec.describe LinkedList do
     list.append("suu")
     list.prepend("dop")
     list.insert(1, "poop")
-    binding.pry
-    expect(list.to_string).to eq("dop poop plop suu")
 
+    expect(list.to_string).to eq("dop poop plop suu")
+  end
+
+  it 'can search list/string' do
+    list = LinkedList.new
+    list.append("plop")
+    list.append("suu")
+    list.prepend("dop")
+    list.insert(1, "poop")
+
+    expect(list.includes?("poop")).to eq(true)
+  end
+
+  it 'can search list/string' do
+    list = LinkedList.new
+    list.append("plop")
+    list.append("suu")
+    list.prepend("dop")
+    list.insert(1, "poop")
+    binding.pry
+    expect(list.includes?("ding")).to eq(false)
   end
 
 end
