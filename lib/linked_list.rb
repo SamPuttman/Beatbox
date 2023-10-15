@@ -73,10 +73,10 @@ class LinkedList
     else
       current_node = @head
       position.times do
-        current_node.next_node
+        current_node = current_node.next_node
       end
-      current_node = Node.new(data)
     end
   end
 end
+
 
