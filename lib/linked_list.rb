@@ -1,16 +1,16 @@
 class LinkedList
-  attr_reader :head
+  attr_accessor :head
   def initialize
     @head = nil
   end
 
   def append(data)
-    #first input is BOTH the head and the tail?
     new_node = Node.new(data)
     if @head.nil?
       @head = new_node
     else
       current_node = @head
+      #utilize until
       #iterate over list until next_node = nil, then insert new_node
       current_node = current_node.next_node until current_node.next_node.nil?
       current_node.next_node = new_node
@@ -21,8 +21,9 @@ class LinkedList
     count = 0
     #start at the head
     current_node = @head
-    #iterate over list until final node, add 1 to count
-    while current_node
+    #utilize while to loop until tail node
+    #iterate over list from the head until final node, add 1 to count for each iteration
+    while current_node != nil
       count += 1
       current_node = current_node.next_node
     end
@@ -30,5 +31,32 @@ class LinkedList
     count
   end
 
+  def to_string
+    string_result = ""
+    current_node = @head
+
+    #use while again, like previous code to loop until tail node.
+    while current_node != nil
+      string_result += current_node.data.to_s
+      #add spacing
+      string_result += " " if current_node.next_node
+      current_node = current_node.next_node
+    end
+    return string_result
+  end
+
+  #copy from line 7
+  def prepend(data)
+    new_node = Node.new(data)
+    if @head.nil?
+      @head = new_node
+    else
+      current_node = @head
+      #utilize until
+      #iterate over list until next_node = nil, then insert new_node
+      current_node = current_node.next_node until current_node.next_node.nil?
+      current_node.next_node = new_node
+    end
+  end
 end
 
