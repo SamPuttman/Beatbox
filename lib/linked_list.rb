@@ -70,14 +70,17 @@ class LinkedList
   #otherwise, iterate over list until position and append?
     else
       current_node = @head
-      position.times do
+      (position - 1).times do
+        break if current_node == nil
         current_node = current_node.next_node
       end
     end
-  #update new_node to current_node if valid node is found
-    if current_node
+  #update new_node to current_node if valid node is found, similar to append.
+    if current_node != nil
       new_node.next_node = current_node.next_node
       current_node.next_node = new_node
+    else
+      puts "ERROR UNABLE TO INSERT AT POSITION #{position}. DOUBLE CHECK LIST LENGTH"
     end
   end
 end
