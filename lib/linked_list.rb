@@ -48,15 +48,21 @@ class LinkedList
   #copy from line 7
   def prepend(data)
     new_node = Node.new(data)
+    #if there's no head, make prepended node head
     if @head.nil?
       @head = new_node
+    #else, the "next node" of the "new node" becomes the current head.
+    #then update the @head to be the newly insterted node.
     else
-      current_node = @head
-      #utilize until
-      #iterate over list until next_node = nil, then insert new_node
-      current_node = current_node.next_node until current_node.next_node.nil?
-      current_node.next_node = new_node
+      new_node.next_node = @head
+      @head = new_node
     end
   end
+
+  #insert method
+  #2 arguments! (position, data)
+  #if inserted in position 0, should become head. handle same as prepend?
+  #otherwise, iterate over list until position and append?
+
 end
 
