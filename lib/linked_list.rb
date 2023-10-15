@@ -84,6 +84,18 @@ class LinkedList
     end
   end
 
+  #find method - looks to work like find(start position, end position)
+  #convert list into array (copy to_string and then convert?)
+  #returns string containing all positions between start and end.
+
+
+
+
+
+
+
+
+
   #copy to_string method and add include? lol 
   def includes?(search_term)
     string_result = ""
