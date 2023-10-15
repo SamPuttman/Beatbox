@@ -60,8 +60,20 @@ RSpec.describe LinkedList do
     list.append("plop")
     list.append("suu")
     list.prepend("dop")
-    binding.pry
+
     expect(list.to_string).to eq("dop plop suu")
 
   end
+
+  it 'can add at index position' do
+    list = LinkedList.new
+    list.append("plop")
+    list.append("suu")
+    list.prepend("dop")
+    list.insert(1, "poop")
+
+    expect(list.to_string).to eq("dop poop plop suu")
+    binding.pry
+  end
+
 end
