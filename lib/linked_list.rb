@@ -63,10 +63,8 @@ class LinkedList
   #2 arguments! (position, data)
   def insert(position, data)
     new_node = Node.new(data)
-  #if inserted in position 0, should become head. handle same as prepend?
-    if @head.nil?
-      @head = new_node
-    elsif position == 0
+  #basically same as prepend method  
+    if position == 0
       new_node.next_node = @head
       @head = new_node
   #otherwise, iterate over list until position and append?
@@ -75,6 +73,11 @@ class LinkedList
       position.times do
         current_node = current_node.next_node
       end
+    end
+  #update new_node to current_node if valid node is found
+    if current_node
+      new_node.next_node = current_node.next_node
+      current_node.next_node = new_node
     end
   end
 end
