@@ -93,18 +93,13 @@ class LinkedList
     string_result = ""
     current_node = @head
 
-    #use while again, like previous code to loop until tail node.
     while current_node != nil
       string_result += current_node.data.to_s
-      #add spacing
       string_result += " " if current_node.next_node
       current_node = current_node.next_node
     end
     return string_result.split.slice(start_pos, end_pos).join(" ")
   end
-
-  
-
 
   #copy to_string method and add include? lol 
   def includes?(search_term)
@@ -119,7 +114,7 @@ class LinkedList
     string_result.include?(search_term)
   end
 
-
+  # .pop - no idea what to do with this one. Can't get it to work.
 
 end
 

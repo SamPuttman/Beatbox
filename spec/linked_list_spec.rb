@@ -101,7 +101,7 @@ RSpec.describe LinkedList do
     list.append("suu")
     list.prepend("dop")
     list.insert(1, "poop")
-    binding.pry
+
     expect(list.includes?("ding")).to eq(false)
   end
 
@@ -111,9 +111,8 @@ RSpec.describe LinkedList do
     list.append("suu")
     list.prepend("dop")
     list.insert(1, "poop")
-
+    binding.pry
     expect(list.find(0,2)).to eq("plop suu dop")
   end
-  binding.pry
 
 end
