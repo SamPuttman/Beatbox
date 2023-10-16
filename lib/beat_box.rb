@@ -16,4 +16,20 @@ class BeatBox
     end
   end
 
+
+  #takes the list in the beatbox and plays it from head until next_node = nil.
+  #iteration
+  #needs a way to communicate with terminal through pry. (use backticks ``)
+  #needs to use string interpolation to pass into terminal.
+
+  def play
+    current_node = @list.head
+    while current_node
+      new_lyric = current_node.data
+      `say -r 1000 #{new_lyric}`
+      current_node = current_node.next_node
+    end
+  end
+
+
 end
