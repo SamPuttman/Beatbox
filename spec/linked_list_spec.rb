@@ -105,4 +105,15 @@ RSpec.describe LinkedList do
     expect(list.includes?("ding")).to eq(false)
   end
 
+  it 'can utilize find' do
+    list = LinkedList.new
+    list.append("plop")
+    list.append("suu")
+    list.prepend("dop")
+    list.insert(1, "poop")
+
+    expect(list.find(0,2)).to eq("plop suu dop")
+  end
+  binding.pry
+
 end

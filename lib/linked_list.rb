@@ -85,15 +85,25 @@ class LinkedList
   end
 
   #find method - looks to work like find(start position, end position)
-  #convert list into array (copy to_string and then convert?)
+  #convert list into array (copy to_string and then convert to array?)
   #returns string containing all positions between start and end.
+  #include? return data
 
+  def find(start_pos, end_pos)
+    string_result = ""
+    current_node = @head
 
+    #use while again, like previous code to loop until tail node.
+    while current_node != nil
+      string_result += current_node.data.to_s
+      #add spacing
+      string_result += " " if current_node.next_node
+      current_node = current_node.next_node
+    end
+    return string_result.split.slice(start_pos, end_pos).join(" ")
+  end
 
-
-
-
-
+  
 
 
   #copy to_string method and add include? lol 
