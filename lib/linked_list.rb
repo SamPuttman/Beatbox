@@ -27,7 +27,7 @@ class LinkedList
     #start at the head
     current_node = @head
     #utilize while to loop until tail node
-    #iterate over list from the head until final node, add 1 to count for each iteration
+    #iterate over list from the head until final node, add 1 to count for each element passed over.
     while current_node != nil
       count += 1
       current_node = current_node.next_node
