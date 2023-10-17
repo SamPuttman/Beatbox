@@ -27,10 +27,9 @@ class BeatBox
     while current_node
       new_lyric = current_node.data
       #seems to not work with the -r playback rate. 
-      `say -r 1000 #{new_lyric}`
       current_node = current_node.next_node
+      `say -r 1000 #{new_lyric}`
     end
   end
-
 
 end
