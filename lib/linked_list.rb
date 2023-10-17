@@ -28,7 +28,7 @@ class LinkedList
       current_node = current_node.next_node
     end
     #display count
-    count
+    return count
   end
 
   def to_string
@@ -111,7 +111,7 @@ class LinkedList
       string_result += " " if current_node.next_node
       current_node = current_node.next_node
     end
-    string_result.include?(search_term)
+    return string_result.include?(search_term)
   end
 
   # .pop - no idea what to do with this one. Can't get it to work.
