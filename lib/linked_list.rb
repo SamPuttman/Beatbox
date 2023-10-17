@@ -1,3 +1,8 @@
+#https://medium.com/@zylberberg.jonathan/linked-lists-f656bd22f2fa
+#https://hackernoon.com/understanding-linkedlist-data-structure-in-ruby-4q653yqo
+
+
+
 class LinkedList
   attr_accessor :head
   def initialize

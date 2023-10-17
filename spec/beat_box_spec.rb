@@ -31,4 +31,6 @@ RSpec.describe BeatBox do
     binding.pry
   end
 
+  #no idea how to test if it actually makes sounds :(
+
 end
