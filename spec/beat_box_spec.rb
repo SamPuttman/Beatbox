@@ -1,6 +1,6 @@
-require './lib/beat_box'
-require './lib/linked_list'
-require './lib/node'
+require './lib/beat_box.rb'
+require './lib/linked_list.rb'
+require './lib/node.rb'
 require 'pry'
 
 RSpec.describe BeatBox do
